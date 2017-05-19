@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "0.17.1" %}
-{% set sha256 = "4b8667375161f9a3516b71d7fd47aa31ba100bb822d1a235baaf9185ea252959" %}
+{% set version = "0.17.5.1" %}
+{% set sha256 = "2a32fa76a11f8aa8de482e99ad2b7a8acc8f6c0d430c48aebd4666f080e85d5c" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
 
   run:
     - python
-    - txaio >=2.5.2
+    - txaio >=2.7.0
     - six >=1.10.0
 
 test:
