@@ -14,9 +14,7 @@ Summary: WebSocket and WAMP in Python for Twisted and asyncio
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/autobahn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/autobahn-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/autobahn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/autobahn-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/autobahn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/autobahn-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/autobahn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/autobahn-feedstock)
 
 Current release info
 ====================

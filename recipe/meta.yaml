@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "17.9.3" %}
-{% set sha256 = "206a3a579a580ca3ce2532ac12ec52d447135c9ace7c4bf6065b832a7cff25ba" %}
+{% set version = "17.10.1" %}
+{% set sha256 = "8cf74132a18da149c5ea3dcbb5e055f6f4fe5a0238b33258d29e89bd276a8078" %}
 
 package:
   name: {{ name|lower }}
@@ -12,6 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
