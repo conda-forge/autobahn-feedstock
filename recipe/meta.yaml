@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "18.3.1" %}
-{% set sha256 = "fc1d38227bb44a453b54cffa48de8b2e6ce48ddc5e97fb5950b0faa27576f385" %}
+{% set version = "18.4.1" %}
+{% set sha256 = "7b61c7d1b6fc88039776692b779b9c1d8d1ea8727a3aba38ec913ebca8aba164" %}
 
 package:
   name: {{ name|lower }}
@@ -14,16 +14,16 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
-    - txaio >=2.7.0
+    - txaio >=2.10.0
     - six >=1.10.0
 
 test:
