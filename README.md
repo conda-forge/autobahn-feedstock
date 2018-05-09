@@ -14,12 +14,15 @@ Summary: WebSocket and WAMP in Python for Twisted and asyncio
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/autobahn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/autobahn-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/autobahn-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/autobahn-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/autobahn/badges/version.svg)](https://anaconda.org/conda-forge/autobahn)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/autobahn/badges/downloads.svg)](https://anaconda.org/conda-forge/autobahn)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-autobahn-green.svg)](https://anaconda.org/conda-forge/autobahn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/autobahn.svg)](https://anaconda.org/conda-forge/autobahn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/autobahn.svg)](https://anaconda.org/conda-forge/autobahn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/autobahn.svg)](https://anaconda.org/conda-forge/autobahn) |
 
 Installing autobahn
 ===================
