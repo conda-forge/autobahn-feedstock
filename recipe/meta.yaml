@@ -22,8 +22,8 @@ requirements:
     - pip
   run:
     - python
-    - txaio >=18.7.1
-    - six >=1.10.0
+    - txaio >=18.8.1
+    - six >=1.11.0
 
 test:
   imports:
