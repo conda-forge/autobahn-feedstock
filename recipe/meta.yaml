@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "19.6.2" %}
-{% set sha256 = "48c2d737d33cfe1d37124db984577c5d4f44e116d05a9f8b6505721413ff9b22" %}
+{% set version = "19.7.1" %}
+{% set sha256 = "89f94a1535673b1655df28ef91e96b7f34faea76da04a5e56441c9ac779a2f9f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .  --verbose
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
@@ -22,8 +22,8 @@ requirements:
     - pip
   run:
     - python
-    - txaio >=18.7.1
-    - six >=1.10.0
+    - txaio >=18.8.1
+    - six >=1.11.0
     - cryptography >=2.7
 
 test:
