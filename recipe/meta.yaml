@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "20.2.1" %}
-{% set sha256 = "1ec603ea374a3b9d85540c499709c41f35f7c6e288b571d12da14aba6c381211" %}
+{% set version = "20.2.2" %}
+{% set sha256 = "8fb9f3e7f6de5b7ee5479a56582873b927cc25d72319d0a86f43d992048d8171" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'WebSocket and WAMP in Python for Twisted and asyncio'
+  summary: WebSocket and WAMP in Python for Twisted and asyncio
 
   doc_url: https://autobahn-python.readthedocs.io
   dev_url: https://github.com/crossbario/autobahn-python
