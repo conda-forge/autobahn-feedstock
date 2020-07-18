@@ -5,7 +5,7 @@ Home: https://github.com/crossbario/autobahn-python
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: WebSocket and WAMP in Python for Twisted and asyncio
 
