@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "20.7.1" %}
-{% set sha256 = "86bbce30cdd407137c57670993a8f9bfdfe3f8e994b889181d85e844d5aa8dfb" %}
+{% set version = "20.12.2" %}
+{% set sha256 = "72b68a1ce1e10e3cbcc3b280aae86d5b2e7a1f409febab1ab91a8a3274113f6e" %}
 
 package:
   name: {{ name|lower }}
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
-    - txaio >=20.3.1
-    - cryptography >=2.7
+    - python >=3.6
+    - txaio >=20.4.1
+    - cryptography >=2.9.2
 
 test:
   imports:
