@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
-    - txaio >=20.3.1
-    - cryptography >=2.7
+    - python >=3.6
+    - txaio >=20.4.1
+    - cryptography >=2.9.2
 
 test:
   imports:
