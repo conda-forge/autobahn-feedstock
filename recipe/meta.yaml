@@ -24,6 +24,7 @@ requirements:
     - python >=3.6
     - txaio >=20.4.1
     - cryptography >=2.9.2
+    - hyperlink >=20.0.1
 
 test:
   imports:
