@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "20.12.3" %}
-{% set sha256 = "410a93e0e29882c8b5d5ab05d220b07609b886ef5f23c0b8d39153254ffd6895" %}
+{% set version = "21.1.1" %}
+{% set sha256 = "93df8fc9d1821c9dabff9fed52181a9ad6eea5e9989d53102c391607d7c1666e" %}
 
 package:
   name: {{ name|lower }}
