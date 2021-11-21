@@ -18,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - txaio >=20.4.1
-    - cryptography >=2.9.2
-    - hyperlink >=20.0.1
+    - python >=3.7
+    - txaio >=21.2.1
+    - cryptography >=3.4.6
+    - hyperlink >=21.0.0
 
 test:
   imports:
