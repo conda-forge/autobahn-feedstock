@@ -1,11 +1,11 @@
-About autobahn
-==============
+About autobahn-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autobahn-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/crossbario/autobahn-python
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autobahn-feedstock/blob/main/LICENSE.txt)
 
 Summary: WebSocket and WAMP in Python for Twisted and asyncio
 
