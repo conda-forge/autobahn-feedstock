@@ -1,6 +1,6 @@
 {% set name = "autobahn" %}
-{% set version = "23.1.2" %}
-{% set sha256 = "c5ef8ca7422015a1af774a883b8aef73d4954c9fcd182c9b5244e08e973f7c3a" %}
+{% set version = "23.6.1" %}
+{% set sha256 = "ce6e540402e3524ca46c55a1bc46255225969b5837ca792ea5415d21ac571034" %}
 
 package:
   name: {{ name|lower }}
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
   run:
-    - python >=3.7
+    - python >=3.9
     - txaio >=21.2.1
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
@@ -33,6 +33,10 @@ test:
     - autobahn.wamp
     - autobahn.websocket
     - autobahn.util
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/crossbario/autobahn-python
