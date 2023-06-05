@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
   run:
-    - python >=3.7
+    - python >=3.9
     - txaio >=21.2.1
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
@@ -33,6 +33,10 @@ test:
     - autobahn.wamp
     - autobahn.websocket
     - autobahn.util
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/crossbario/autobahn-python
