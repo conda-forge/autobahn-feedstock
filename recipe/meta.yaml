@@ -13,6 +13,8 @@ build:
   noarch: python
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+  - wamp = autobahn.__main__:_main
 
 requirements:
   host:
@@ -24,6 +26,7 @@ requirements:
     - txaio >=21.2.1
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
+    - setuptools
 
 test:
   imports:
@@ -37,6 +40,7 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
+    - wamp -h
 
 about:
   home: https://github.com/crossbario/autobahn-python
