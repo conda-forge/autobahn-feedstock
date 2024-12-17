@@ -38,6 +38,10 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+    # For cli autobahn[twisted]
+    - zope.interface >=5.2.0
+    - twisted >=24.3.0
+    - attrs >=20.3.0
   commands:
     - pip check
     - wamp -h
