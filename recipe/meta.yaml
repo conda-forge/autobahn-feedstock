@@ -1,30 +1,32 @@
 {% set name = "autobahn" %}
 {% set version = "24.4.2" %}
-{% set sha256 = "a2d71ef1b0cf780b6d11f8b205fd2c7749765e65795f2ea7d823796642ee92c9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a2d71ef1b0cf780b6d11f8b205fd2c7749765e65795f2ea7d823796642ee92c9
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+  - wamp = autobahn.__main__:_main
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - txaio >=21.2.1
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
+    - setuptools
 
 test:
   imports:
@@ -35,8 +37,14 @@ test:
     - autobahn.util
   requires:
     - pip
+    - python {{ python_min }}
+    # For cli autobahn[twisted]
+    - zope.interface >=5.2.0
+    - twisted >=24.3.0
+    - attrs >=20.3.0
   commands:
     - pip check
+    - wamp -h
 
 about:
   home: https://github.com/crossbario/autobahn-python
