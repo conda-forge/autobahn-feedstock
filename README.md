@@ -11,7 +11,7 @@ Summary: WebSocket and WAMP in Python for Twisted and asyncio
 
 Development: https://github.com/crossbario/autobahn-python
 
-Documentation: https://autobahn-python.readthedocs.io
+Documentation: https://autobahn-python.readthedocs.io/
 
 Current build status
 ====================
