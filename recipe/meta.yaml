@@ -1,5 +1,5 @@
 {% set name = "autobahn" %}
-{% set version = "24.4.2" %}
+{% set version = "25.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a2d71ef1b0cf780b6d11f8b205fd2c7749765e65795f2ea7d823796642ee92c9
+  sha256: 01c4632b48f4fb2296ecd44eada9e584f76e9cab1f6d6f158393e7937c8a0e58
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-  - wamp = autobahn.__main__:_main
+    - wamp = autobahn.__main__:_main
 
 requirements:
   host:
