@@ -14,6 +14,8 @@ source:
 build:
   number: 0
   script: python -m pip install . -vv --no-build-isolation --no-deps
+  skip:
+    - match(python, "<3.11")
   python:
     entry_points:
       - wamp = autobahn.__main__:_main
@@ -55,7 +57,6 @@ tests:
       pip_check: true
   - requirements:
       run:
-        - python ${{ python_min }}.*
         - zope.interface >=5.2.0
         - twisted >=24.3.0
         - attrs >=20.3.0
