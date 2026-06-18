@@ -1,35 +1,40 @@
 schema_version: 1
 
 context:
-  name: autobahn
   version: "26.6.1"
-  python_min: "3.11"
 
 package:
-  name: ${{ name|lower }}
+  name: autobahn
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/autobahn/autobahn-${{ version }}.tar.gz
   sha256: 66b27e066a8ea265541eb07fd964e3116e2b8f51d797eea8a46b55c07fd81a07
 
 build:
   number: 0
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: python -m pip install . -vv --no-build-isolation --no-deps
   python:
     entry_points:
       - wamp = autobahn.__main__:_main
 
 requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - hatchling
+        - cffi >=2.0.0
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
   host:
-    - python ${{ python_min }}.*
+    - python
     - pip
     - hatchling
     - cffi >=2.0.0
-    - setuptools >=70.0.0
   run:
-    - python >=${{ python_min }}
+    - python
     - txaio >=25.12.2
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
@@ -46,8 +51,8 @@ tests:
         - autobahn.wamp
         - autobahn.websocket
         - autobahn.util
+        - autobahn.nvx
       pip_check: true
-      python_version: ${{ python_min }}.*
   - requirements:
       run:
         - python ${{ python_min }}.*
