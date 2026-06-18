@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: autobahn
-  version: "25.12.2"
+  version: "26.6.1"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 754c06a54753aeb7e8d10c5cbf03249ad9e2a1a32bca8be02865c6f00628a98c
+  sha256: 66b27e066a8ea265541eb07fd964e3116e2b8f51d797eea8a46b55c07fd81a07
 
 build:
   number: 0
