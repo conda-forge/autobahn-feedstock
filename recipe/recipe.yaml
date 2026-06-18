@@ -28,6 +28,7 @@ requirements:
         - cross-python_${{ target_platform }}
         - hatchling
         - cffi >=2.0.0
+        - setuptools
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
@@ -35,6 +36,7 @@ requirements:
     - pip
     - hatchling
     - cffi >=2.0.0
+    - setuptools
   run:
     - python
     - txaio >=25.12.2
