@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "26.6.1"
+  version: "26.6.2"
 
 package:
   name: autobahn
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/autobahn/autobahn-${{ version }}.tar.gz
-  sha256: 66b27e066a8ea265541eb07fd964e3116e2b8f51d797eea8a46b55c07fd81a07
+  sha256: 51c96b778c739f0a3e78aaea4beba4df05db9092267c7813a7d13c643cbc28f7
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install . -vv --no-build-isolation --no-deps
   skip:
     - match(python, "<3.11")
