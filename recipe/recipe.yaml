@@ -45,7 +45,6 @@ requirements:
     - msgpack-python >=1.0.2
     - ujson >=4.0.2
     - cbor2 >=6.1.0
-    - py-ubjson >=0.16.1
 
 tests:
   - python:
