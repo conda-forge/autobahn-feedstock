@@ -40,11 +40,11 @@ requirements:
   run:
     - python
     - txaio >=25.12.2
-    - cryptography >=3.4.6
+    - cryptography >=50
     - hyperlink >=21.0.0
     - msgpack-python >=1.0.2
     - ujson >=4.0.2
-    - cbor2 >=5.2.0
+    - cbor2 >=6.1.0
     - py-ubjson >=0.16.1
 
 tests:
